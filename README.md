@@ -4,10 +4,10 @@ Create a new Django project using :\
 django-admin.py startproject  projectname\
 
 <h4>DEVELOPMENT</h4>\
-#1. Set up Django\
+<h5>1. Set up Django\</h5>
 To create a Django app, we’ll need to install Django. That’s easy enough!\
 First, though, consider creating a new virtual environment for your project so you can manage your dependencies separately.\
-#1.2 Install Django\
+<h5>1.1 Install Django\</h5>
 Now, we can install Django:\
 $ pip install django\
 Next, let’s start a new Django project:\
@@ -31,7 +31,7 @@ Django version 2.2.1, using settings 'mysite.settings'\
 Starting development server at http://127.0.0.1:8000/\
 Quit the server with CONTROL-C.\
 Go to localhost:8000 and you should see the Django welcome screen\
-1.3 Create API app\
+<h5>1.2 Create API app\</h5>
 We could build our application with the folder structure the way it is right now. However, best practice is to separate your Django project into separate apps when you build\ something new.
 So, let’s create a new app for our API:\
 $ python manage.py startapp myapi\
