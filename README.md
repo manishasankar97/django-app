@@ -3,7 +3,7 @@
 Create a new Django project using :\
 django-admin.py startproject  projectname\
 
-<h4>DEVELOPMENT</h4>\
+<h3>DEVELOPMENT</h3>
 <h5>1. Set up Django\</h5>
 To create a Django app, we’ll need to install Django. That’s easy enough!\
 First, though, consider creating a new virtual environment for your project so you can manage your dependencies separately.\
