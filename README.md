@@ -1,7 +1,8 @@
 # django-app
 #ReadMe File for application
 Create a new Django project using :
-django-admin.py startproject  projectname
+django-admin.py startproject  projectname\
+
 ##DEVELOPMENT
 #1. Set up Django
 To create a Django app, we’ll need to install Django. That’s easy enough!
