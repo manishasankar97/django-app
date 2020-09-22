@@ -18,4 +18,16 @@ And if we look inside that folder, there’s everything we need to run a Django 
 >>cd dsite/
 >> dir
 manage.py*  dsite/
+Let’s make sure it works. Test run the Django server:
+$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+System check identified no issues (0 silenced).
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+sep 21, 2020 - 16:09:28
+Django version 2.2.1, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Go to localhost:8000 and you should see the Django welcome screen!
 
