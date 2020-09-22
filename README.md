@@ -8,7 +8,7 @@ To create a Django app, we’ll need to install Django. That’s easy enough!
 First, though, consider creating a new virtual environment for your project so you can manage your dependencies separately.
 #1.2 Install Django
 Now, we can install Django:
->> pip install django
+$ pip install django
 Next, let’s start a new Django project:
 >> django-admin startproject dsite
 If we look at the directory now, we’ll see that Django created a new folder for us:
