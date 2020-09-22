@@ -16,30 +16,30 @@ If we look at the directory now, we’ll see that Django created a new folder fo
 >> dir\
 dsite/
 And if we look inside that folder, there’s everything we need to run a Django site:\
->>cd dsite/
->> dir
-manage.py*  dsite/
-Let’s make sure it works. Test run the Django server:
-$ python manage.py runserver
-Watching for file changes with StatReloader
-Performing system checks...
-System check identified no issues (0 silenced).
-You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
-sep 21, 2020 - 16:09:28
-Django version 2.2.1, using settings 'mysite.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-Go to localhost:8000 and you should see the Django welcome screen
-1.3 Create API app
-We could build our application with the folder structure the way it is right now. However, best practice is to separate your Django project into separate apps when you build something new.
-So, let’s create a new app for our API:
-$ python manage.py startapp myapi
-$ ls
-db.sqlite3  manage.py*  myapi/  mysite/
-1.4 Register the myapi app with the mysite project
-We need to tell Django to recognize this new app that we just created. The steps we do later won’t work if Django doesn’t know about myapi.
-So, we edit mysite/settings.py :
+>>cd dsite/\
+>> dir\
+manage.py*  dsite/\
+Let’s make sure it works. Test run the Django server:\
+$ python manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+System check identified no issues (0 silenced).\
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\
+Run 'python manage.py migrate' to apply them.\
+sep 21, 2020 - 16:09:28\
+Django version 2.2.1, using settings 'mysite.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+Go to localhost:8000 and you should see the Django welcome screen\
+1.3 Create API app\
+We could build our application with the folder structure the way it is right now. However, best practice is to separate your Django project into separate apps when you build\ something new.
+So, let’s create a new app for our API:\
+$ python manage.py startapp myapi\
+$ ls\
+db.sqlite3  manage.py*  myapi/  mysite/\
+1.4 Register the myapi app with the mysite project\
+We need to tell Django to recognize this new app that we just created. The steps we do later won’t work if Django doesn’t know about myapi.\
+So, we edit mysite/settings.py :\
 INSTALLED_APPS = [
     'myapi.apps.MyapiConfig',
     ... # Leave all the other INSTALLED_APPS
