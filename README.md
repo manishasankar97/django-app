@@ -69,3 +69,11 @@ Running migrations:\
   Applying auth.0011_update_proxy_permissions... OK\
   Applying sessions.0001_initial... OK\
 1.6 Create Super User\
+It would be nice if we had access to Django’s pretty admin interface when we want to review the data in our database.
+To do so, we’ll need login credentials. So, let’s make ourselves the owners and administrators of this project. THE ALL-POWERFUL SUPERUSER!!!
+$ python manage.py createsuperuser
+Username (leave blank to use 'bennett'): 
+Email address: hello@bennettgarner.com
+Password: 
+Password (again): 
+Superuser created successfully.
