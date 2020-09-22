@@ -43,7 +43,7 @@ So, we edit mysite/settings.py :\
 INSTALLED_APPS = [\
     'myapi.apps.MyapiConfig',\
     ... # Leave all the other INSTALLED_APPS\
-]
+]\
 1.5 Migrate the database!\
 Whenever we create or make changes to a model, we need to tell Django to migrate those changes to the database. The Django ORM then writes all the SQL CREATE TABLE commands for us.\
 So, let’s migrate those initial models:\
