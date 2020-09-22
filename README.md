@@ -11,13 +11,13 @@ First, though, consider creating a new virtual environment for your project so y
 Now, we can install Django:\
 $ pip install django\
 Next, let’s start a new Django project:\
->> django-admin startproject dsite\
+django-admin startproject dsite\
 If we look at the directory now, we’ll see that Django created a new folder for us:\
->> dir\
+dir\
 dsite/
 And if we look inside that folder, there’s everything we need to run a Django site:\
->>cd dsite/\
->> dir\
+cd dsite/\
+ dir\
 manage.py*  dsite/\
 Let’s make sure it works. Test run the Django server:\
 $ python manage.py runserver\
