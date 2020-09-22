@@ -18,4 +18,4 @@ And if we look inside that folder, there’s everything we need to run a Django 
 >>cd dsite/
 >> dir
 manage.py*  dsite/
-..
+
