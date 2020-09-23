@@ -1,12 +1,11 @@
-<h6>django-app</h6>
-#ReadMe File for application<br/>
+<h6>README FILE for django-app</h6>
+
 Create a new Django project using :<br/>
-$django-admin.py startproject  projectname<br/>
+  >>django-admin.py startproject  projectname<br/>
 
 <h3>DEVELOPMENT</h3>
 <h4>1. Set up Django</h4>
-To create a Django app, we’ll need to install Django. \<br />
-
+To create a Django app, we’ll need to install Django. <br />
 
 <h4>1.1 Install Django</h4><br/>
 $ pip install django<br />
