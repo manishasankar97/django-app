@@ -137,7 +137,7 @@ And visit localhost:8000/admin<br />
 While we’re on the admin site, might as well create a few users in our application.<br />
 Click “Add.” Then, add users!<br />
 
-<h4>3. Set up Django REST Framework</h4><br />
+<h3>3. Set up Django REST Framework</h3>
  We need to serialize the data from our database via endpoints.<br />
  To do that, we’ll need Django REST Framework, so let’s get that installed.<br />
   `$ pip install djangorestframework<br />`
@@ -148,7 +148,7 @@ Click “Add.” Then, add users!<br />
       'rest_framework',<br />
   ]<br />`
   
-<h4>4. Serialize the User model</h4><br />
+<h3>4. Serialize the User model</h3>
  We need to tell REST Framework about our User model and how it should serialize the data.
  Serialization is the process of converting a Model to JSON. Using a serializer, we can specify what fields should be present in the JSON representation of the model.
  To do so, let’s create a new file — dapi/serializers.py<br />
@@ -167,10 +167,10 @@ Here’s how:<br />
               fields = ('real_name', 'tz','activity_period')<br />
 
         
-<h4>5. Display the data</h4><br />
+<h3>5. Display the data</h3>
 Now,to wire up the URLs and views to display the data!<br />
 
-<h4>5.1 Views</h4><br />
+<h4>5.1 Views</h4>
 Let’s start with the view. We need to render the different Users in JSON format.<br />
 To do so, we need to:<br />
 Query the database for all Users<br />
@@ -180,15 +180,13 @@ In dapi/views.py:<br />
   from rest_framework import viewsets<br />
   from .serializers import UserSerializer<br />
   from .models import User<br />
-
   class UserViewSet(viewsets.ModelViewSet):<br />
       queryset = User.objects.all().order_by('name')<br />
       serializer_class = UserSerializer<br />
 
 ModelViewSet is a special view that Django Rest Framework provides. It will handle GET and POST for User .<br />
 
-
-<h4>5.2 Site URLs</h4><br />
+<h4>5.2 Site URLs</h4>
  The last step is to point a URL at the viewset we just created.<br />
 In Django, URLs get resolved at the project level first. So there’s a file in dsite/ directory called urls.py .<br />
 You’ll see the URL for the admin site is already in there. Now, we just need to add a URL for our API. For now, let’s just put our API at the index:<br />
@@ -199,7 +197,7 @@ You’ll see the URL for the admin site is already in there. Now, we just need t
       path('admin/', admin.site.urls),<br />
       path('', include('dapi.urls')),<br />
    ]
-<h4>5.3 API URLs</h4><br />
+<h4>5.3 API URLs</h4>>
 If you’re paying attention and not just blindly copy-pasting, you’ll notice that we included 'dapi.urls' . That’s a path to a file we haven’t edited yet. And that’s where Django is going to look next for instructions on how to route this URL.<br />
 So, let’s go there next — dapi/urls.py:<br />
        # dapi/urls.py<br />
@@ -218,7 +216,6 @@ Notice we added something called router that we imported from rest_framework.<br
 The REST Framework router will make sure our requests end up at the right resource dynamically. If we add or delete items from the database, the URLs will update to match. <br />
 A router works with a viewset (see views.py above) to dynamically route requests. In order for a router to work, it needs to point to a viewset, and in most cases, if you have a viewset you’ll want a router to go with it.<br /> 
 Test it out!<br />
-
 
 Start up the Django server again:<br />
   $ python manage.py runserver<br />
