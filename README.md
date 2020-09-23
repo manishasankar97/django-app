@@ -16,15 +16,15 @@ Now, we’ll see that Django created a new folder for us:<br />
   dsite`  <br />
 
 And if we look inside that folder, there’s everything we need to run a Django site:<br />
-  `cd dsite/  \n
-   dir\  \n
+  `cd dsite/\n
+   dir\\n
   manage.py*  dsite/`<br />
 
 To make sure it works. Test run the Django server:<br />
-`$ python manage.py runserver  \n
-Watching for file changes with StatReloader \n 
-Performing system checks...  \n
-System check identified no issues (0 silenced).  \n
+`$ python manage.py runserver\n
+Watching for file changes with StatReloader\n 
+Performing system checks...\n
+System check identified no issues (0 silenced).\n
 You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.  
 Run 'python manage.py migrate' to apply them.  
 sep 21, 2020 - 16:09:28  
