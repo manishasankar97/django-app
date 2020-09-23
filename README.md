@@ -140,13 +140,13 @@ Click “Add.” Then, add users!<br />
 <h3>3. Set up Django REST Framework</h3>
  We need to serialize the data from our database via endpoints.<br />
  To do that, we’ll need Django REST Framework, so let’s get that installed.<br />
-  `$ pip install djangorestframework<br />`
+   $ pip install djangorestframework<br />
  Now, tell Django that we installed the REST Framework in dsite/settings.py:<br />
-  `INSTALLED_APPS = [<br />
+  INSTALLED_APPS = [<br />
       # All your installed apps stay the same<br />
       ...<br />
       'rest_framework',<br />
-  ]<br />`
+  ]<br />
   
 <h3>4. Serialize the User model</h3>
  We need to tell REST Framework about our User model and how it should serialize the data.
@@ -211,7 +211,7 @@ So, let’s go there next — dapi/urls.py:<br />
        urlpatterns = [<br />
            path('', include(router.urls)),<br />
            path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))<br />
-       ]
+       ]<br/>
 Notice we added something called router that we imported from rest_framework.<br />
 The REST Framework router will make sure our requests end up at the right resource dynamically. If we add or delete items from the database, the URLs will update to match. <br />
 A router works with a viewset (see views.py above) to dynamically route requests. In order for a router to work, it needs to point to a viewset, and in most cases, if you have a viewset you’ll want a router to go with it.<br /> 
