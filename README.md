@@ -7,7 +7,7 @@ To create a Django app, we’ll need to install Django. <br />
   <h4>1.1 Install Django</h4>
     `$ pip install django`<br /> 
 Next, let’s start a new Django project:<br />
-  `$django-admin startproject dsite`<br />
+  `>django-admin startproject dsite` <br />
   
 Now, we’ll see that Django created a new folder for us:<br />
   `dir/  
