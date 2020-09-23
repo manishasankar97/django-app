@@ -21,16 +21,16 @@ And if we look inside that folder, there’s everything we need to run a Django 
   manage.py*  dsite/<br />`
 
 To make sure it works. Test run the Django server:<br />
-`$ python manage.py runserver<br />
-Watching for file changes with StatReloader<br />
-Performing system checks...<br />
-System check identified no issues (0 silenced).<br />
-You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br />
-Run 'python manage.py migrate' to apply them.<br />
+`$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+System check identified no issues (0 silenced).
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
 sep 21, 2020 - 16:09:28<br />
-Django version 3.1.1, using settings 'dsite.settings'<br />
-Starting development server at http://127.0.0.1:8000/<br />
-Quit the server with CONTROL-C.<br />`
+Django version 3.1.1, using settings 'dsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.`
 Go to localhost:8000 and you should see the Django welcome screen<br />
 
 <h4>1.2 Create API app\</h4>
