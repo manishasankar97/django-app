@@ -1,20 +1,19 @@
 <h6>README FILE for django-app</h6>
 
 Create a new Django project using :<br/>
-  $django-admin.py startproject  projectname<br/>
+  `$django-admin.py startproject  projectname<br/>`
 
-<h3>DEVELOPMENT</h3>
-<h4>1. Set up Django</h4>
+<h2>1. Set up Django</h2>
 To create a Django app, we’ll need to install Django. <br />
   <h4>1.1 Install Django</h4><br/>
-    $ pip install django<br />
+    `$ pip install django<br />`
     
 Next, let’s start a new Django project:<br />
-  $django-admin startproject dsite<br />
+  `$django-admin startproject dsite<br />`
   
 Now, we’ll see that Django created a new folder for us:<br />
-dir/<br />
-dsite/<br />
+  `dir/<br />
+  dsite/<br />`
 
 And if we look inside that folder, there’s everything we need to run a Django site:<br />
 cd dsite/<br />
@@ -53,7 +52,7 @@ INSTALLED_APPS = [<br />
 <h4>1.4Migrate the database!</h4><br />
 Whenever we create or make changes to a model, we need to tell Django to migrate those changes to the database. The Django ORM then writes all the SQL CREATE TABLE commands for us.<br />
 So, let’s migrate those initial models:<br />
-$ python manage.py migrate<br />
+`$ python manage.py migrate<br />
     Operations to perform:<br />
       Apply all migrations: admin, auth, contenttypes, sessions<br />
     Running migrations:<br />
@@ -73,18 +72,18 @@ $ python manage.py migrate<br />
        Applying auth.0009_alter_user_last_name_max_length... OK\<br />
        Applying auth.0010_alter_group_name_max_length... OK\<br />
        Applying auth.0011_update_proxy_permissions... OK\<br />
-       Applying sessions.0001_initial... OK\<br />
+       Applying sessions.0001_initial... OK\<br />`
        
        
 <h4>1.5 Create Super User</h4><br />
 It would be nice if we had access to Django’s pretty admin interface when we want to review the data in our database.<br/>
 To do so, we’ll need login credentials. So, let’s make ourselves the owners and administrators of this project.<br/>
- $ python manage.py createsuperuser<br/>
-   Username (leave blank to use 'manisha'): <br/>
-   Email address: manisha@admin.com<br />
-   Password: <br />
-   Password (again): <br />
-   Superuser created successfully.<br />
+     `$ python manage.py createsuperuser<br/>
+     Username (leave blank to use 'manisha'): <br/>
+     Email address: manisha@admin.com<br />
+     Password: <br />
+     Password (again): <br />
+     Superuser created successfully.<br />`
 Let’s verify that it works. Start up the Django server:<br />
  $ python manage.py runserver<br />
  And then navigate to localhost:8000/admin<br />
