@@ -12,13 +12,13 @@ Next, let’s start a new Django project:<br />
   `$django-admin startproject dsite`<br />
   
 Now, we’ll see that Django created a new folder for us:<br />
-  `dir/  \n
-  dsite`  <br />
+  <p>`dir/  </p>
+  <p>dsite</p>`  <br />
 
 And if we look inside that folder, there’s everything we need to run a Django site:<br />
-  `cd dsite/\n
-   dir\\n
-  manage.py*  dsite/`<br />
+  <p>`cd dsite/</p>
+   <p>dir\</p>
+  <p>manage.py*  dsite/</p>`<br />
 
 To make sure it works. Test run the Django server:<br />
 `$ python manage.py runserver\n
