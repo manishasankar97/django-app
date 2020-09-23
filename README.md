@@ -31,6 +31,7 @@ Django version 2.2.1, using settings 'mysite.settings'<br />
 Starting development server at http://127.0.0.1:8000/<br />
 Quit the server with CONTROL-C.<br />
 Go to localhost:8000 and you should see the Django welcome screen<br />
+
 <h4>1.2 Create API app\</h4>
 We could build our application with the folder structure the way it is right now. However, best practice is to separate your Django project into separate apps when you build something new.<br />
 So, let’s create a new app for our API:<br />
