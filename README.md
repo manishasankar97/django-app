@@ -4,7 +4,7 @@ Create a new Django project using :<br />
   $django-admin.py startproject  projectname<br/>
 <h3>1. Set up Django:</h3>
 To create a Django app, we’ll need to install Django. <br />
-  <h4>1.1 Install Django</h4><br/>
+  <h4>1.1 Install Django</h4>\
     $ pip install django <br /> 
 Next, let’s start a new Django project:<br />
   $django-admin startproject dsite <br />
@@ -38,7 +38,7 @@ Go to localhost:8000 and you should see the Django welcome screen<br />
    $ ls\<br />
    db.sqlite3  manage.py*  dapi/  dsite/<br />
    
-<h4>1.3 Register the dapi app with the dsite project</h4><br />
+<h4>1.3 Register the dapi app with the dsite project\</h4>
 We need to tell Django to recognize this new app that we just created.<br />
 So, we edit dsite/settings.py :<br />
      INSTALLED_APPS = [<br />
@@ -46,7 +46,7 @@ So, we edit dsite/settings.py :<br />
         ... # Leave all the other INSTALLED_APPS<br />
       ]<br />
 
-<h4>1.4Migrate the database!</h4><br />
+<h4>1.4Migrate the database!\</h4>
 Whenever we create or make changes to a model, we need to tell Django to migrate those changes to the database. The Django ORM then writes all the SQL CREATE TABLE commands for us.<br />
 So, let’s migrate those initial models:<br />
          $ python manage.py migrate
@@ -72,7 +72,7 @@ So, let’s migrate those initial models:<br />
                Applying sessions.0001_initial... OK <br/>
        
        
-<h4>1.5 Create Super User</h4><br />
+<h4>1.5 Create Super User\</h4>
 It would be nice if we had access to Django’s pretty admin interface when we want to review the data in our database.<br/>
 To do so, we’ll need login credentials. So, let’s make ourselves the owners and administrators of this project.<br/>
             $ python manage.py createsuperuser<br/>
@@ -86,12 +86,12 @@ Let’s verify that it works. Start up the Django server:<br />
  And then navigate to localhost:8000/admin<br />
 Log in with your superuser credentials, and you should see the admin dashboard:<br />
 
-<h3>2. Create a model in the database that Django ORM will manage</h3><br />
+<h3>2. Create a model in the database that Django ORM will manage\</h3>
 Let’s make our first model!<br />
 We’ll build it in dapi/models.py , so open up that file.<br />
 
 
-<h4>2.1 dapi/models.py</h4><br />
+<h4>2.1 dapi/models.py\</h4>
 Let’s make a database of superusers! Each user has a name and an tz. We’ll start there with our model:<br />
   # models.py<br />
     from django.db import models<br />
@@ -108,7 +108,7 @@ Let’s make a database of superusers! Each user has a name and an tz. We’ll s
  real_name,tz,start_time etc., are character fields where we can store strings. The __str__ method just tells Django what to print when it needs to print out an instance of the User model.<br />
  
  
-<h4>2.2 Make migrations</h4><br />
+<h4>2.2 Make migrations\</h4>
 Whenever we define or change a model, we need to tell Django to migrate those changes.<br />
    $ python manage.py makemigrations
     Migrations for 'dapi':<br />
