@@ -31,14 +31,14 @@ To make sure it works. Test run the Django server:<br />
             Quit the server with CONTROL-C. <br />
 Go to localhost:8000 and you should see the Django welcome screen<br />
 
-<h4>1.2 Create API app\</h4>
+<h4>1.2 Create API app</h4>\
  To separate your Django project into separate apps when you build something new.<br />
     Let’s create a new app for our API:<br />
    $ python manage.py startapp dapi<br />
    $ ls\<br />
    db.sqlite3  manage.py*  dapi/  dsite/<br />
    
-<h4>1.3 Register the dapi app with the dsite project\</h4>
+<h4>1.3 Register the dapi app with the dsite project</h4>\
 We need to tell Django to recognize this new app that we just created.<br />
 So, we edit dsite/settings.py :<br />
      INSTALLED_APPS = [<br />
@@ -46,7 +46,7 @@ So, we edit dsite/settings.py :<br />
         ... # Leave all the other INSTALLED_APPS<br />
       ]<br />
 
-<h4>1.4Migrate the database!\</h4>
+<h4>1.4Migrate the database!</h4>\
 Whenever we create or make changes to a model, we need to tell Django to migrate those changes to the database. The Django ORM then writes all the SQL CREATE TABLE commands for us.<br />
 So, let’s migrate those initial models:<br />
          $ python manage.py migrate
