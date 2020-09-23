@@ -1,7 +1,7 @@
 <h1>README FILE for django-app</h1>
 
 Create a new Django project using :<br />
-  $django-admin.py startproject  projectname<br/>
+  #django-admin.py startproject  projectname<br/>
 <h3>1. Set up Django:</h3>
 To create a Django app, we’ll need to install Django. <br />
   <h4>1.1 Install Django</h4>\
@@ -31,14 +31,14 @@ To make sure it works. Test run the Django server:<br />
             Quit the server with CONTROL-C. <br />
 Go to localhost:8000 and you should see the Django welcome screen<br />
 
-<h4>1.2 Create API app</h4>\
+<h4>1.2 Create API app</h4>
  To separate your Django project into separate apps when you build something new.<br />
     Let’s create a new app for our API:<br />
    $ python manage.py startapp dapi<br />
    $ ls\<br />
    db.sqlite3  manage.py*  dapi/  dsite/<br />
    
-<h4>1.3 Register the dapi app with the dsite project</h4>\
+<h4>1.3 Register the dapi app with the dsite project</h4>
 We need to tell Django to recognize this new app that we just created.<br />
 So, we edit dsite/settings.py :<br />
      INSTALLED_APPS = [<br />
@@ -46,7 +46,7 @@ So, we edit dsite/settings.py :<br />
         ... # Leave all the other INSTALLED_APPS<br />
       ]<br />
 
-<h4>1.4Migrate the database!</h4>\
+<h4>1.4Migrate the database!</h4>
 Whenever we create or make changes to a model, we need to tell Django to migrate those changes to the database. The Django ORM then writes all the SQL CREATE TABLE commands for us.<br />
 So, let’s migrate those initial models:<br />
          $ python manage.py migrate
@@ -72,7 +72,7 @@ So, let’s migrate those initial models:<br />
                Applying sessions.0001_initial... OK <br/>
        
        
-<h4>1.5 Create Super User\</h4>
+<h4>1.5 Create Super User</h4>
 It would be nice if we had access to Django’s pretty admin interface when we want to review the data in our database.<br/>
 To do so, we’ll need login credentials. So, let’s make ourselves the owners and administrators of this project.<br/>
             $ python manage.py createsuperuser<br/>
@@ -82,18 +82,18 @@ To do so, we’ll need login credentials. So, let’s make ourselves the owners 
              Password (again): <br />
              Superuser created successfully.<br />
 Let’s verify that it works. Start up the Django server:<br />
-       $ python manage.py runserver<br />
+      # python manage.py runserver<br />
  And then navigate to localhost:8000/admin<br />
 Log in with your superuser credentials, and you should see the admin dashboard:<br />
 
-<h3>2. Create a model in the database that Django ORM will manage\</h3>
+<h3>2. Create a model in the database that Django ORM will manage</h3>
 Let’s make our first model!<br />
 We’ll build it in dapi/models.py , so open up that file.<br />
 
 
-<h4>2.1 dapi/models.py\</h4>
+<h4>2.1 dapi/models.py</h4>
 Let’s make a database of superusers! Each user has a name and an tz. We’ll start there with our model:<br />
-  # models.py<br />
+  # models.py
     from django.db import models<br />
     class User(models.Model):<br />
         real_name = models.CharField(max_length=60)<br />
