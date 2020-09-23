@@ -2,8 +2,7 @@
 
 Create a new Django project using :<br />
   `$django-admin.py startproject  projectname`
-
-<h3>1. Set up Django</h3>
+<h3>1. Set up Django:</h3>
 To create a Django app, we’ll need to install Django. <br />
   <h4>1.1 Install Django</h4><br/>
     `$ pip install django`<br />
@@ -12,19 +11,19 @@ Next, let’s start a new Django project:<br />
   `$django-admin startproject dsite`<br />
   
 Now, we’ll see that Django created a new folder for us:<br />
-  <p>`dir/  </p>
-  <p>dsite</p>`  <br />
+  `dir/  
+  dsite`  <br />
 
 And if we look inside that folder, there’s everything we need to run a Django site:<br />
-  <p>`cd dsite/</p>
-   <p>dir\</p>
-  <p>manage.py*  dsite/</p>`<br />
+  `cd dsite/
+   dir\
+  manage.py*  dsite/`<br />
 
 To make sure it works. Test run the Django server:<br />
-`$ python manage.py runserver\n
-Watching for file changes with StatReloader\n 
-Performing system checks...\n
-System check identified no issues (0 silenced).\n
+`$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+System check identified no issues (0 silenced).
 You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.  
 Run 'python manage.py migrate' to apply them.  
 sep 21, 2020 - 16:09:28  
@@ -71,7 +70,7 @@ So, let’s migrate those initial models:<br />
        Applying auth.0009_alter_user_last_name_max_length... OK
        Applying auth.0010_alter_group_name_max_length... OK
        Applying auth.0011_update_proxy_permissions... OK
-       Applying sessions.0001_initial... OK`<br/>
+       Applying sessions.0001_initial... OK` <br/>
        
        
 <h4>1.5 Create Super User</h4><br />
@@ -207,17 +206,15 @@ So, let’s go there next — dapi/urls.py:<br />
      `# dapi/urls.py<br />
      from django.urls import include, path<br />
      from rest_framework import routers<br />
-     from . import views<br />`
-
-     router = routers.DefaultRouter()<br />
+     from . import views<br />
+     router = routers.DefaultRouter()
      router.register(r'Users', views.UserViewSet)<br />
-
      # Wire up our API using automatic URL routing.<br />
      # Additionally, we include login URLs for the browsable API.<br />
      urlpatterns = [<br />
          path('', include(router.urls)),<br />
          path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))<br />
-     ]
+     ]`
 Notice we added something called router that we imported from rest_framework.<br />
 The REST Framework router will make sure our requests end up at the right resource dynamically. If we add or delete items from the database, the URLs will update to match. <br />
 A router works with a viewset (see views.py above) to dynamically route requests. In order for a router to work, it needs to point to a viewset, and in most cases, if you have a viewset you’ll want a router to go with it.<br /> 
