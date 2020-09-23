@@ -212,8 +212,11 @@ So, let’s go there next — dapi/urls.py:<br />
            path('', include(router.urls)),<br />
            path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))<br />
        ]<br/>
+       
 Notice we added something called router that we imported from rest_framework.<br />
-The REST Framework router will make sure our requests end up at the right resource dynamically. If we add or delete items from the database, the URLs will update to match. <br />
+The REST Framework router will make sure our requests end up at the right resource dynamically. If we add or delete items from the database, the URLs will update to match.
+<br />
+
 A router works with a viewset (see views.py above) to dynamically route requests. In order for a router to work, it needs to point to a viewset, and in most cases, if you have a viewset you’ll want a router to go with it.<br /> 
 Test it out!<br />
 
@@ -229,6 +232,7 @@ GET an Individual User<br />
 We can GET a single model instance using its ID.<br />
 Django REST Framework viewsets take care of this for us.<br />
 If you go to 127.0.0.1:8000/users/<id>/ where <id> is the ID of one of your User models, you’ll be able to see just that user.<br />
+  
 For example,"users": "http://127.0.0.1:8000/users/" for me returns:<br />
   GET /heroes/<br />
   HTTP 200 OK<br />
