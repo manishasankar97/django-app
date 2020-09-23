@@ -1,17 +1,17 @@
 <h1>README FILE for django-app</h1>
 
 Create a new Django project using :<br />
-  `$django-admin.py startproject  projectname`
+  $django-admin.py startproject  projectname
 <h3>1. Set up Django:</h3>
 To create a Django app, we’ll need to install Django. <br />
   <h4>1.1 Install Django</h4>
-    `$ pip install django`<br /> 
+    $ pip install django <br /> 
 Next, let’s start a new Django project:<br />
-  `>django-admin startproject dsite` <br />
+  >django-admin startproject dsite <br />
   
 Now, we’ll see that Django created a new folder for us:<br />
-  `dir/  
-  dsite`  <br />
+  dir/  
+  dsite <br />
 
 And if we look inside that folder, there’s everything we need to run a Django site:<br />
   `cd dsite/
